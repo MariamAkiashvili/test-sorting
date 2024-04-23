@@ -15,6 +15,4 @@ public class Sorting {
         }
 
     }
-
-//    void mergeSort()
 }

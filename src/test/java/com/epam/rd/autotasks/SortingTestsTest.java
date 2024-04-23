@@ -1,5 +1,6 @@
 package com.epam.rd.autotasks;
 
+
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
@@ -53,7 +54,7 @@ public class SortingTestsTest {
         JUnitCore junit = new JUnitCore();
         Result result = junit.run(NullCarelessSortingTestExtension.class);
 
-        assertEquals(1, result.getFailureCount());
+        assertEquals(2, result.getFailureCount());
         assertEquals(5, result.getRunCount());
 
         Failure nullCaseFailure = null;

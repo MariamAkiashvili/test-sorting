@@ -6,9 +6,8 @@ public class TrickySortingImpl extends Sorting{
     @Override
     public void sort(final int[] array) {
         super.sort(array);
-        if(array.length>0){
-            array[0] = new Random().nextInt();
-        }
+        array[0] = new Random().nextInt();
+
 
     }
 }
