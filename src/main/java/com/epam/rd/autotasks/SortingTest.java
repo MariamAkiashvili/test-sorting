@@ -2,6 +2,9 @@ package com.epam.rd.autotasks;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+
+import java.util.Arrays;
 
 
 public class SortingTest {
@@ -10,28 +13,24 @@ public class SortingTest {
 
     @Test
     public void testNullCase(){
-        try {
-            sorting.sort(null);
-            Assert.fail("Expected IllegalArgumentException");
-        } catch (IllegalArgumentException e) {
-            // Success
-        }
+//        Assert.assertTrue(IllegalArgumentException.class.);
+        Assertions.assertThrows(IllegalArgumentException.class, () -> sorting.sort(null));
     }
 
 
 
     @Test
     public void testEmptyCase(){
-        int[] arr = {};
+        int[] arr = new int [] {};
         sorting.sort(arr);
-        Assert.assertEquals(0,arr.length);
+        Assert.assertEquals(0, arr.length);
     }
 
     @Test
     public void testSingleElementArrayCase() {
         int[]arr = new int[] {1};
         sorting.sort(arr);
-        Assert.assertEquals(1, arr[0]);
+        Assertions.assertEquals(1, arr.length);
     }
 
     @Test

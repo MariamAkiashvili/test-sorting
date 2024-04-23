@@ -8,11 +8,13 @@ public class Sorting {
 
 
         if(array == null){
-            throw new IllegalArgumentException();
-        }else{
+            throw new IllegalArgumentException("Unexpected exception");
+        }
+        if (array.length > 0){
             Arrays.sort(array);
         }
 
-
     }
+
+//    void mergeSort()
 }
