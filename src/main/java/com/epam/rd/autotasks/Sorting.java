@@ -2,6 +2,8 @@ package com.epam.rd.autotasks;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Sorting {
     public void sort(int[] array){

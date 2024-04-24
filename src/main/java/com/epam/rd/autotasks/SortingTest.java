@@ -44,7 +44,9 @@ public class SortingTest {
     @Test
     public void testOtherCases() {
         int[] arr = new int[] {2,2,1,4,12};
+
         sorting.sort(arr);
+//        arr[0] = 4;
         Assert.assertEquals(1, arr[0]);
     }
 
