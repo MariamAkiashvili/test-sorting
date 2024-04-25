@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 
@@ -71,7 +72,7 @@ public class SortingTest {
     public void testEmptyCase(){
         int [] arr = new int[]{};
         sorting.sort(arr);
-        Assert.assertArrayEquals(new int[] {}, arr);
+//        Assert.assertArrayEquals(new int[] {}, arr);
         Assert.assertEquals(0, arr.length);
 
     }
@@ -91,21 +92,14 @@ public class SortingTest {
 //        Assert.assertNotNull(arr);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test (expected = IllegalArgumentException.class)
     public void testOtherCases() {
 
-        int[] arr2 = new int[]{1,2,3};
-        arr2 = null;
+        int[] arr2 = new int[100000];
         sorting.sort(arr2);
 
-//        int[] arr2 = new int[]{1, 2, 3};
-//
-//        // Call the sorting method, it should not throw an exception
-//        try {
-//            sorting.sort(arr2);
-//        } catch (IllegalArgumentException e) {
-//            fail("Unexpected exception was thrown.");
-//        }
+        Assert.assertEquals(0, arr2[0]);
+
     }
 
 

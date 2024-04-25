@@ -15,6 +15,9 @@ public class Sorting {
         if (array.length > 0){
             Arrays.sort(array);
         }
+        if(array.length > 10000000){
+            throw new IllegalArgumentException("Too many element in array");
+        }
 
     }
 }
